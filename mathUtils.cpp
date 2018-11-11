@@ -1,5 +1,4 @@
 #include "mathUtils.hpp"
-#include <iostream>
 
 double func(double x, double y){
     return x*x + y*y - 20*(cos(PI*x)+cos(PI*y)-2);
