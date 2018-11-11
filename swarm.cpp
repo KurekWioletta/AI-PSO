@@ -1,5 +1,4 @@
 #include "swarm.hpp"
-#include <iostream>
 
 Swarm::Swarm(int swarmSize, double c1, double c2, double maxVelocity, vector<vector<int>> bounds):
     c1_(c1), c2_(c2),swarmSize_(swarmSize){
