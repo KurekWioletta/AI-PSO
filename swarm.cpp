@@ -29,8 +29,8 @@ void Swarm::optimize(){
     }
 
     for (int i = 0; i < swarmSize_; i++){
-        swarmArray_[i].updatePosition();
         swarmArray_[i].updateVelocity(c1_, c2_, constructionFactor_, bestPos_);
+        swarmArray_[i].updatePosition();
     }
 }
 
