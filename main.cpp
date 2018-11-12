@@ -16,7 +16,11 @@ int main(){
     for (int i = 0; i < 2000; i++) {
         swarm.optimize();
     }
-    cout << swarm.getBestValue();
+
+    /* output for our example, where dimension of vector equals 2 */
+
+    cout << "f(x,y) = " << swarm.getBestValue() << endl;
+    cout << "(x,y) = (" << swarm.getBestPos()[0] << "," << swarm.getBestPos()[1] << ")" << endl; 
 
     return 0;
 }
