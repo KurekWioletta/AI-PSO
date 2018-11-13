@@ -4,13 +4,11 @@ Swarm::Swarm(int swarmSize, double c1, double c2, double maxVelocity, vector<vec
     c1_(c1), c2_(c2),swarmSize_(swarmSize){
     
     swarmArray_ = new Particle[swarmSize];
-    for (int i = 0; i < swarmSize; i++) {
+    for (int i = 0; i < swarmSize; i++) 
         swarmArray_[i] = Particle(maxVelocity, bounds);
-    }
 
-    for (int i = 0; i < bounds.size(); i++) {
+    for (int i = 0; i < bounds.size(); i++)  
         bestPos_.push_back(0);
-    }
      
     if (c1_ + c2_ > 4)
         constructionFactor_ = 2 / (2 + sqrt((c1_ + c2_)*(c1_ + c2_) - 4 * (c1_ + c2_)));

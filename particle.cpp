@@ -7,12 +7,11 @@ Particle::Particle(double maxVelocity, vector<vector<int>> bounds){
     bounds_ = bounds;
     dimension_ = bounds_.size();
 
-    for (int i = 0; i < dimension_; i++) {
+    for (int i = 0; i < dimension_; i++) 
         pos_.push_back(randomDouble(bounds_[i][0], bounds_[i][1]));
-    }
-    for (int i = 0; i < dimension_; i++) {
+    
+    for (int i = 0; i < dimension_; i++) 
         velocity_.push_back(randomDouble(maxVelocity * (-1), maxVelocity));
-    }
  
     bestPos_ = pos_;
     bestValue_ = 100000;
@@ -33,12 +32,11 @@ void Particle::updatePosition(){
         pos_[i] += velocity_[i];
         
         /* if out of bounds */
-        if (pos_[i] < bounds_[i][0]){
+        if (pos_[i] < bounds_[i][0])
             pos_[i] = bounds_[i][0];
-        }
-        else if (pos_[i] > bounds_[i][1]){
+            
+        else if (pos_[i] > bounds_[i][1])
             pos_[i] = bounds_[i][1];
-        }
     }
 }
 

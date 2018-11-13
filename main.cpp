@@ -13,12 +13,10 @@ int main(){
     cin >> c2;
     
     Swarm swarm = Swarm(30, c1, c2, 0.1, bounds);
-    for (int i = 0; i < 2000; i++) {
+    for (int i = 0; i < 2000; i++) 
         swarm.optimize();
-    }
 
     /* output for our example, where dimension of vector equals 2 */
-
     cout << "f(x,y) = " << swarm.getBestValue() << endl;
     cout << "(x,y) = (" << swarm.getBestPos()[0] << "," << swarm.getBestPos()[1] << ")" << endl; 
 
