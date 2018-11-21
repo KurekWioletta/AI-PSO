@@ -1,4 +1,5 @@
 #include "swarm.hpp"
+#include <fstream>
 
 Swarm::Swarm(int swarmSize, double c1, double c2, double maxVelocity, vector<vector<int>> bounds):
     c1_(c1), c2_(c2),swarmSize_(swarmSize){
@@ -11,9 +12,11 @@ Swarm::Swarm(int swarmSize, double c1, double c2, double maxVelocity, vector<vec
         bestPos_.push_back(0);
      
     if (c1_ + c2_ > 4)
-        constructionFactor_ = 2 / (2 + sqrt((c1_ + c2_)*(c1_ + c2_) - 4 * (c1_ + c2_)));
+        constructionFactor_ = 
+            2 / abs(2 - (c1_ + c2_) - sqrt((c1_ + c2_) * (c1_ + c2_) - 4 * (c1_ + c2_)));
 
     bestValue_ = 100000;
+
 }
 
 void Swarm::optimize(){

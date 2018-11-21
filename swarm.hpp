@@ -1,5 +1,6 @@
 #pragma once
-#include"particle.hpp"
+#include "particle.hpp"
+#include <cmath>
 
 class Swarm{
     public:
