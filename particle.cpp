@@ -44,7 +44,7 @@ void Particle::updateVelocity(double c1, double c2, double constructionFactor, v
     for (int i = 0; i < dimension_; i++){
         double velCognitive = randomDouble(0,c1) * (bestPos_[i] - pos_[i]);
         double velSocial = randomDouble(0,c2) * (bestPos[i] - pos_[i]);
-        double velocity = constructionFactor * (velocity_[i] + velCognitive + velSocial);
+        double velocity = constructionFactor * velocity_[i] + velCognitive + velSocial;
         
         velocity_[i] = 
             abs(velocity) > abs(maxVelocity_) ? maxVelocity_ * (velocity < 0 ? -1 : 1) : velocity;
