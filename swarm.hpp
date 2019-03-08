@@ -14,8 +14,8 @@ class Swarm{
         const double c1_; /* cognitive velocity constant */
         const double c2_; /* social velocity constant */
         double constructionFactor_ = 1; /* how much to weigh the previous velocity */
-        double bestValue_;
+        double bestValue_; /* value of particle with the best fitness ever */
+        vector<double> bestPos_;  /* position of particle with the best fitness ever */
         int swarmSize_;
         Particle* swarmArray_;
-        vector<double> bestPos_;  
 };
