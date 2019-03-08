@@ -15,9 +15,9 @@ class Particle{
 
         vector<double> pos_;
         vector<double> velocity_;
-        vector<double> bestPos_; 
+        vector<double> bestPos_;  /* position of particle with the best fitness in one epoch */
     
-        double bestValue_;
+        double bestValue_; /* value of particle with the best fitness in one epoch */
         double maxVelocity_;
         int dimension_;
 };
