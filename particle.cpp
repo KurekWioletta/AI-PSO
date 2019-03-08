@@ -1,5 +1,4 @@
 #include "particle.hpp"
-#include <iostream>
 
 Particle::Particle(){}
 
