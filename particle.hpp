@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 #include "mathUtils.hpp"
 
 class Particle{
